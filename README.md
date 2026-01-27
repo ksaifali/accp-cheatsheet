@@ -133,6 +133,7 @@ Another profitable resource is the [whitepaper Overview of Amazon Web Services](
  - [AWS Data Sync](#aws-data-sync)
  - [AWS CodePipeline ](#aws-codepipeline)
  - [Amazon GuardDuty](#amazon-guardduty)
+ - Amazon Polly (#aws-polly)
  - [Amazon Macie](#amazon-macie)
  - [AWS OpsWorks](#aws-opsworks)
  - [AWS Partner Network (APN)](#aws-partner-network-apn)
@@ -814,6 +815,10 @@ AWS Scaling **horizontally**:
 ### Amazon GuardDuty
 - Amazon GuardDuty is a **threat detection** service that **continuously monitors** your **AWS accounts** and **workloads** for malicious activity and delivers detailed security findings for visibility and remediation.
 - For implementing a threat detection service that continuously monitors malicious activities and **unauthorized behaviors** protect AWS account, workloads and data stored in Amazon S3 we use this service.
+
+ ### #aws-polly
+ Amazon Polly is a Text-to-Speech (TTS) service.
+You give it text, and it converts that text into natural-sounding human speech using AI voices.
 
 ### Amazon Macie
 - It can be used to **detect users' personal credit card numbers** from data stored in Amazon **S3**.
