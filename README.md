@@ -884,6 +884,11 @@ AWS Scaling **horizontally**:
 2. Envision
 3. Launch
 4. Scale
+5. The "Align" perspective focuses on identifying capability gaps, assessing an organization's current state, and aligning the organization's people, processes, and technology to prepare for successful cloud adoption. It involves creating a detailed plan for migration, setting up a governance structure, and aligning stakeholders.
+
+The "Envision" perspective in the AWS Cloud Adoption Framework is focused on creating a shared vision and understanding of what cloud adoption means for the organization, its goals, and its stakeholders. It deals with setting the direction and establishing a business case for cloud adoption.
+
+The "Launch" perspective in the AWS Cloud Adoption Framework is about executing the cloud adoption plan developed during the "Envision" and "Align" phases. It involves actually migrating workloads and applications to the cloud.
 
 ### Six Rs strategies for migration
 1. Rehosting
