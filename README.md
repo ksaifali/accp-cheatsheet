@@ -540,6 +540,7 @@ AWS Scaling **horizontally**:
 - Shared responsibilities:
 	- Patch Management.
 	- Configuration Management.
+ - Employee awareness and training
 
 ### Amazon RDS
 - Read replicas are used for **offloading read traffic** from the primary RDS database.
