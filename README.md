@@ -984,3 +984,29 @@ The "Launch" perspective in the AWS Cloud Adoption Framework is about executing 
 -  In IAM user access and secrert keys:
 	-  The customer is responsible for **rotating** keys.
 -  Which compute hosting model should be accounted for in the Total Cost of Ownership (TCO) when undertaking a cost analysis that allows physical isolation of a customer workload? **Dedicated Hosts**.
+-  AWS Systems Manager Parameter Store
+
+Stores configuration data & passwords
+
+Free (standard tier) → most cost-effective
+
+Supports encryption with KMS
+
+No automatic rotation
+
+Best for app configs, environment variables, simple secrets
+
+AWS Secrets Manager
+
+Stores secrets only (DB creds, API keys)
+
+Paid service
+
+Supports automatic secret rotation
+
+Designed for frequently changing credentials
+
+One-line exam difference 🧠
+
+Cheap config + passwords → Parameter Store
+Rotation + enterprise secrets → Secrets Manager
