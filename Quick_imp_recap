@@ -1,0 +1,130 @@
+What is AWS Trusted Advisor?
+AWS Trusted Advisor is an online tool that acts as a customized cloud expert. It scans your AWS environment in real-time and provides actionable recommendations to help you follow AWS best practices.
+
+The 6 Pillars (Categories)
+Trusted Advisor evaluates your account across these key areas:
+
+💰 Cost Optimization: Identifies idle or underutilized resources to save money (e.g., stopping idle EC2 instances).
+
+🚀 Performance: Checks for service usage limits and provisioned throughput to ensure applications run efficiently.
+
+🔒 Security: Detects security vulnerabilities (e.g., S3 buckets with public access, weak IAM passwords).
+
+⚠️ Fault Tolerance: Flags potential single points of failure to increase application redundancy (e.g., no snapshots, single-AZ deployments).
+
+📈 Service Quotas: Alerts you when you are nearing more than 80% of your service limits (e.g., VPC limits, instance limits).
+
+⚙️ Operational Excellence: Helps maintain manageable and efficient operations (e.g., identifying resources not managed by Systems Manager).
+Gemini said
+What is an AWS IAM Access Key?
+An IAM Access Key is a set of long-term credentials used to interact with AWS programmatically. Unlike a username and password (used for the Management Console), access keys allow the AWS CLI, SDKs, and APIs to verify your identity and permissions.
+     What is VPC Peering?
+VPC Peering is a networking connection between two Virtual Private Clouds (VPCs) that allows them to route traffic to each other using private IP addresses. Once peered, instances in both VPCs behave as if they are on the same local network.
+Key Features
+Private Connectivity: Traffic stays on the AWS Global Backbone. It never traverses the public internet, making it highly secure.
+
+No Single Point of Failure: It is not a gateway or a physical appliance; there are no bandwidth bottlenecks or hardware risks.
+
+Cross-Account & Cross-Region: You can peer VPCs across different AWS accounts and different geographical regions (Inter-Region Peering).
+
+Cost-Efficient: There is no charge for setting up a peering connection. You only pay standard data transfer rates (inter-AZ or inter-region).
+What is AWS Transit Gateway?
+AWS Transit Gateway (TGW) is a network hub that allows you to connect thousands of Virtual Private Clouds (VPCs) and on-premises networks through a single central point.
+
+Think of it as a "Cloud Router." Instead of creating a messy "web" of individual peering connections, everything plugs into the Transit Gateway, which manages all the traffic in one place.
+Hub-and-Spoke Model:
+Transitive Routing: Unlike VPC Peering, Transit Gateway allows traffic to pass through it to reach another destination (e.g., VPC A can talk to VPC C via the Gateway).
+Scale: Supports up to 5,000 VPC attachments per gateway and massive throughput (up to 50 Gbps per VPC attachment).
+Transit Gateway vs. VPC Peering
+Architecture,Point-to-Point (Full Mesh),Central Hub (Hub-and-Spoke)
+Transitive?,❌ No,✅ Yes
+Complexity,High at scale (hard to manage),Low at scale (simplified)
+Hybrid Cloud,Not native (requires VPN/DX),✅ Native support for VPN/Direct Connect
+Cost,🆓 No setup fee (Data transfer only),💰 Hourly fee + Data processing fee
+Best For,2–10 VPCs,10+ VPCs or complex hybrid networks
+What is AWS Control Tower?
+AWS Control Tower is a managed service that automates the setup of a secure, multi-account AWS environment. It acts as an orchestration layer on top of AWS Organizations to ensure every account in your company follows the same security and compliance rules.
+Scenario: "A company needs to set up a new, secure multi-account environment according to AWS best practices."
+
+👉 Answer: AWS Control Tower.
+What is AWS Security Hub?
+AWS Security Hub is a centralized security manager that gives you a comprehensive view of your security alerts and security posture across your AWS accounts. It acts as an aggregator, pulling in data from various AWS security services and third-party tools into a single dashboard.
+Scenario: "A security team wants a centralized dashboard to view security alerts from multiple AWS accounts and check if they meet PCI DSS standards."
+
+👉 Answer: AWS Security Hub.
+What is AWS Batch?
+AWS Batch is a fully managed service that allows you to run hundreds of thousands of batch computing jobs efficiently. It handles the heavy lifting of provisioning, scheduling, and scaling your compute resources based on the volume of work.
+Fully Managed: You don't have to install or manage batch software or server clusters.
+
+Dynamic Scaling: It scales up when the queue is full and scales down to zero when the queue is empty.
+
+Cost Optimization: Natively supports EC2 Spot Instances, allowing you to run batch jobs for up to 90% off regular prices.
+
+Dependency Management: You can set jobs to run only after a previous job completes (e.g., "Don't analyze the data until the download job is finished").
+What is AWS Systems Manager (SSM)?
+AWS Systems Manager is an operations hub that provides a unified user interface to track, manage, and automate tasks across your AWS resources and on-premises servers. It simplifies the management of "nodes" (EC2 instances, VMs, or edge devices) at scale.
+Access Key ID: * What it is: A public identifier for your IAM user.
+Secret Access Key:
+
+What it is: A private credential used to sign programmatic requests.
+ecurity Rule: It is only shown once when you create the key. If you lose it, you cannot recover it; you must delete the old pair and create a new one.
+User ID:
+
+What it is: A unique internal identifier (like AIDA...) that AWS assigns to every IAM user.
+Database key
+Primary key
+What is AWS Key Management Service (AWS KMS)?
+AWS KMS is a managed service that makes it easy for you to create and control the cryptographic keys used to encrypt your data. It is the "central vault" for all encryption keys in your AWS account.
+
+Secondary key
+Types of KMS Keys
+AWS Managed Keys: Created and managed by AWS services (e.g., aws/s3). You can view them but cannot delete or rotate them manually. They are free.
+
+Customer Managed Keys: Keys you create. You have full control over their permissions, rotation, and deletion.
+
+AWS Owned Keys: Keys that AWS uses across multiple accounts. You cannot see or manage these.
+AWS Service Health Dashboard
+The "Is AWS Down?" Page: Provides the global status of all AWS services across all regions.
+
+Public Access: You do not need to log in to see this.
+Key Word: Public / Global status
+
+AWS Trusted Advisor Dashboard
+The "Cloud Consultant": An automated tool that compares your account against AWS Best Practices.
+ey Words: Recommendations / Best Practices / Cost & Security checks.
+
+Amazon CloudWatch Dashboard
+The "Custom Monitor": A highly customizable dashboard where you can build your own graphs and charts.
+Key Words: Metrics / Graphs / Alarms / Customizable / Performance monitoring.
+Amazon CloudWatch Dashboard
+The "Custom Monitor": A highly customizable dashboard where you can build your own graphs and charts.
+Key Words: Metrics / Graphs / Alarms / Customizable / Performance monitoring.
+support plan :-
+. Basic Support
+Who it's for: All AWS customers automatically.
+
+What you get: 24/7 access to customer service (billing/account issues only) and 7 Core Trusted Advisor checks.
+
+Limitation: No technical support for breaks/fixes.
+Developer Support
+Who it's for: Non-production workloads.
+
+What you get: Email access to Cloud Support Associates during business hours.
+
+Response Time: < 24 hours (General), < 12 hours (System impaired).
+
+Business+ Support
+Who it's for: Running production workloads.
+
+What you get: 24/7 access to Cloud Support Engineers via Email, Chat, and Phone.
+
+Special Features: Full set of Trusted Advisor checks and the AWS Support API for automation.
+Enterprise (On-Ramp & Full)
+The "White Glove" Service: Designed for large-scale operations.
+
+Technical Account Manager (TAM): Your primary point of contact at AWS who helps with architecture, cost, and reviews.
+Concierge Support: A dedicated team to assist with complex billing and account inquiries.
+
+Infrastructure Event Management (IEM): Short-term engagement to help you prepare for big events like a product launch (included in Enterprise, extra fee for Business).
+
+
